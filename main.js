@@ -16,10 +16,10 @@ const popUp = document.querySelector(".pop-up");
 const popUpMessage = document.querySelector(".pop-up__message");
 const popUpRefreshBtn = document.querySelector(".pop-up__refresh");
 
-const carrotSound = new Audio("../sound/carrot_pull.mp3");
-const failSound = new Audio("../sound/bug_pull.mp3");
-const winSound = new Audio("../sound/game_win.mp3");
-const bgSound = new Audio("../sound/bg.mp3");
+const carrotSound = new Audio("./sound/carrot_pull.mp3");
+const failSound = new Audio("./sound/bug_pull.mp3");
+const winSound = new Audio("./sound/game_win.mp3");
+const bgSound = new Audio("./sound/bg.mp3");
 
 let started = false;
 let score = 0;
@@ -51,8 +51,8 @@ function stopGame() {
 
 function initGame() {
   field.innerHTML = "";
-  addItem(field, CARROT_COUNT, "../img/carrot.png", "carrot");
-  addItem(field, BUG_COUNT, "../img/bug.png", "bug");
+  addItem(field, CARROT_COUNT, "./img/carrot.png", "carrot");
+  addItem(field, BUG_COUNT, "./img/bug.png", "bug");
   field.addEventListener("click", onFieldClickListener);
 }
 
